@@ -6,32 +6,28 @@ import java.sql.SQLException;
 
 public class ConexionMySQL {
 
-    public Connection get_conection(){
+    public Connection conectarDB(){
 
-        Connection connection = null;
+        Connection conexion = null;
 
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/listasdb","root","");
-            /*if (connection!=null){
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/listasdb","root","");
+            if (conexion!=null){
                 System.out.println("Conectado con Exito!");
-            }*/
+            }
         } catch (SQLException e) {
             System.out.println("Error de conexion: "+e);
         }
-        return connection;
+        return conexion;
     }
 
     public void conectar(){
 
         ConexionMySQL conect = new ConexionMySQL();
-        try (Connection conec = conect.get_conection()){
+        try (Connection conec = conect.conectarDB()){
 
         }catch (Exception e){
             System.out.println(e);
         }
     }
-
-
-
-
 }
