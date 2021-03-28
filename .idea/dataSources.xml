@@ -10,5 +10,11 @@
         <property name="APPROVED_DRIVER" value="mysql.8" />
       </jdbc-additional-properties>
     </data-source>
+    <data-source source="LOCAL" name="MongoDB - listasdb@localhost" uuid="14ad3661-b5c8-4acc-aa44-4e81f8e2942c">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://localhost:27017/listasdb</jdbc-url>
+    </data-source>
   </component>
 </project>
