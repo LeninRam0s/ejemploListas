@@ -53,7 +53,6 @@ public class Lista {
         return (List) this;
     }
 
-
     public Lista insertarCabeza(Nodo cabeza, int valor){
         cabeza.enlace = new Nodo(valor);
         cabeza = cabeza.enlace;
@@ -68,8 +67,6 @@ public class Lista {
             }
         }return null;
     }
-
-
 
     public void eliminar(int entrada) {
         Nodo actual, anterior;

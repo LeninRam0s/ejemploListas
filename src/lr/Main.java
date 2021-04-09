@@ -1,27 +1,20 @@
 package lr;
 
 
-import ConexionDB.ConexionMySQL;
-import ConexionDB.clsDAO;
-import ConexionDB.clsDatos;
 import Ejemplos.ClsEjemplos;
-import ListaPuntos.Lista;
+import Graficos.clsReproductor;
 import objListaOrdenada.ListaOrdenada;
 
-import java.sql.Connection;
-import java.util.*;
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 	// write your code here
        //new ClsEjemplos().ejemplo1();
        // new clsDAO().mostrarGanadores();
      //   int pausa;
       //  pausa =0;
-
-
-
 
         /*new ClsEjemplos().pruebaArreglo();
         Lista lst = new Lista().crearLista();
@@ -38,15 +31,13 @@ public class Main {
 
         new ConexionMySQL().conectar();*/
 
-
-
-       // new ClsEjemplos().ganadores();
+        new ClsEjemplos().ganadores();
 
         ListaOrdenada lista;
        lista=new ListaOrdenada();
 
         Random random = new Random();
-
+        //limitado a 10 ganadores
          for (int i=0; i<10;i++){
              int x=random.nextInt(200)*1;
 
@@ -63,6 +54,8 @@ public class Main {
 
         System.out.println("Elementos de la lista: ");
         lista.visualizar();
+
+        clsReproductor rep = new clsReproductor();
 
         int pausa;
         pausa =0;
